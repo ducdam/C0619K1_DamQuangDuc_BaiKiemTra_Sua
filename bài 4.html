@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm createArray() nhận đầu vào là một mảng 2 chiều,
+
+    //đầu ra là mảng 1 chiều chứa tất cả phần tử của mảng đầu vào.
+
+    //Nếu là index của hàng là số lẻ thì đảo ngược vị trí các phần tử thuộc hàng đó.
+    let arr1 = [[1, 2, 3], [3, 4, 5], [6, 7, 8]];
+
+    let result = daoNguocMang(arr1);
+    document.write(result);
+
+    function daoNguocMang(arr) {
+        let newArr = [];
+        newArr = arr;
+        for (let i = 0; i < newArr.length; i++) {
+            if (i % 2 != 0) {
+                newArr[i].reverse();
+            }
+        }
+        return newArr;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm isPrime() kiểm tra 1 số có phải là số nguyên tố hay không.
+    //   Đầu vào là một số nguyên và đầu ra là 1 giá trị kiểu boolean
+    //  (Nếu số nguyên là số nguyên tố thì kết quả là true, ngược lại là false).
+    function isPrime(number) {
+        for (i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let input = Number(prompt());
+    ketqua = isPrime(input);
+    alert(ketqua);
+</script>
+
+</body>
+</html>

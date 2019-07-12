@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //Cho danh sách các số nguyên ở trong một mảng. Viết hàm listPrimes()
+    //với đầu vào là mảng số nguyên và đầu ra là một mảng mới chứa các số là nguyên tố thuộc mảng đã cho.
+    let arr1 = [10, 5, 2, 8, 7, 13];
+    let result = listPrimes(arr1);
+    document.write(result);
+
+    function isPrimes(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function listPrimes(arrInterger) {
+        let newListPrimes = [];
+        for (i = 0; i < arrInterger.length; i++) {
+            if (isPrimes(arrInterger[i])) {
+                newListPrimes.push(arrInterger[i]);
+            }
+        }
+        return newListPrimes;
+    }
+
+</script>
+</body>
+</html>
